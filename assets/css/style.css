@@ -1,0 +1,59 @@
+body {
+
+}
+
+.main-container {
+	margin-top: 20px;
+}
+
+.image {
+	
+	 /* The image used */
+    background-image: "assets/images/crystals.jpg");
+
+    /* Full height */
+ 	width: 100%;
+
+    /* Center and scale the image nicely */
+    /*background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;*/
+    
+}
+	
+
+
+.jumbotron {
+	background-color: #9d9db0;
+	color: #ffffff;
+	display: flex;
+  	justify-content: center;
+  	align-items: center;
+}
+
+.imageSize {
+	width: 100px;
+	height: 100px;
+}
+.crystals {
+	opacity: 1;
+}
+
+.panel-title {
+	font-weight: bold;
+
+}
+
+.panel-body  {
+	opacity: 1;
+	background-color: #9d9db0;
+	color: #ffffff;
+}
+.panel {
+	border: 0;
+}	
+	
+}
+footer {
+	letter-spacing: 4px;
+	}
