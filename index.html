@@ -1,37 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Crystal Collector</title>
+	<title>Crystals Collector</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=NTR|Permanent+Marker|Poiret+One|Syncopate" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
 </head>
 <body background="assets/images/crystals.jpg" class="image">
-	
-
 	<div class="container">
 		<div class="main-container">
 		<!--header-->
 		<div class="jumbotron">
 			<div class="container">
-				<h1 class="text-center">CrystalsCollector</h1>
+				<h1 class="text-center" id="main-heading">Crystals Collector</h1>
 			</div>
 		</div>
-		
 		<!--instructions-->
 		<div class="jumbotron">
 			<div class="container">
 				<p>You will be given a random number at he start of the game.</p>
 				<p>There will be four crystals below. By clicking on a crystal you will add a specific amount of points to our total score.</p>
-				<p>You win the gam by matching your total score to random number, you lose the game if your total score goes above the random number</p>
+				<p>You win the game by matching your total score to target score, you lose the game if your total score goes above the total score</p>
+				<p>Lose three times and you are a big fat loser</p>
 				<p>The value of each crystal is hidden from you until you click on it</p>
 				<p>Each time when the game starts, the game will change the values of each crystal</p>
 			</div>
 		</div>
-		
 		<!--jewels-->
 		<div class="row">
 			<div class="col-sm-3">
@@ -55,20 +51,21 @@
 				</div>
 			</div>
 		</div>
+		<!--new div if player losses three times-->
+		<div class="row" id="newRow">
+		</div>
 		<!--score/wins/losses-->
 		<div class="row">
-			
 			<div class="col-sm-3">
 				<div class="panel panel-danger">
 					<div class="panel-heading">
-						<h3 class="panel-title text-center">Target Score:</h3>
+						<h3 class="panel-title text-center">Target score:</h3>
 					</div>
 					<div class="panel-body" >
 						<h1 class="text-center" id="targetScore">0</h1>
 					</div>
 				</div>
 			</div>
-			
 			<div class="col-sm-3">
 				<div class="panel panel-info">
 					<div class="panel-heading">
@@ -79,7 +76,6 @@
 					</div>
 				</div>
 			</div>
-			
 			<div class="col-sm-3">
 				<div class="panel panel-warning">
 					<div class="panel-heading">
@@ -90,7 +86,6 @@
 					</div>
 				</div>
 			</div>
-			
 			<div class="col-sm-3">
 				<div class="panel panel-success">
 					<div class="panel-heading">
@@ -104,146 +99,11 @@
 		</div>
 		<!--footer-->
 		<footer class="jumbotron">
-			<h4>
-				Tyler Barlow
-			</h4>
-			
+			<h3>&copy; Tyler Barlow</h3>
 		</footer>
-
-
 		</div>		
 	</div>
-
-	<script type="text/javascript">
-
-//The player will have to guess the answer, just like in Hangman. This time, though, the player will guess with numbers instead of letters. 
-//Here's how the app works:
-
-
-
-//There will be four crystals displayed as buttons on the page.
-//The player will be shown a random number at the start of the game.
-//The random number shown at the start of the game should be between 19 - 120.
-//Each crystal should have a random hidden value between 1 - 12.
-
-//global variables
-//===============================
-var randomResult = "";
-var wins=0;
-var losses=0;
-
-
-var crystal = {
-	red:
-	{
-		name: "red", 
-		value: 0
-	},
-	blue: 
-	{
-		name: "blue", 
-		value: 0
-	},
-	yellow: 
-	{
-		name: "yellow",
-		value: 0
-	},
-	green:
-	{
-		name: "green",
-		value: 0
-	}
- };
-
-var targetScore= 0;
-var totalScore = 0;
-//When the player clicks on a crystal, it will add a specific amount of points to the player's total score. 
-var playerclick = ""; 
-
-//Your game will hide this amount until the player clicks a crystal.
-//When they do click one, update the player's score counter.
-
-//functions
-//==================================
-//starts game and resets game
-
-var startGame = function(){
-
-var totalScore = 0;
-
-targetScore = Math.floor(Math.random() * (120 - 19 + 1)) + 19;
-console.log(targetScore);
-
-crystal.red.value = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
-console.log(crystal.red.value);
-
-crystal.blue.value = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
-console.log(crystal.blue.value);
-
-crystal.yellow.value = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
-console.log(crystal.yellow.value);
-
-crystal.green.value = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
-console.log(crystal.green.value);
-
-$("#yourScore").html(totalScore);
-$("#targetScore").html(targetScore);
-}
-var addValues = function(crystal){
-	totalScore = totalScore + crystal.value;
-	console.log(totalScore);
-	$("#yourScore").html(totalScore);
-}
-
-
-
-
-//calling function which starts the game
-startGame();
-
-//The player wins if their total score matches the random number from the beginning of the game.
-
-
-//main process
-//===================================
-$("#red").click(function(){
-	addValues(crystal.red);
-});
-
-$("#blue").click(function(){
-	addValues(crystal.blue);
-});
-
-$("#yellow").click(function(){
-	addValues(crystal.yellow);
-});
-
-$("#green").click(function(){
-	addValues(crystal.green);
-});
-
-if (true) {} 
-//The player loses if their score goes above the random number.
-else {}
-//The game restarts whenever the player wins or loses.
-
-
-
-//When the game begins again, the player should see a new random number. Also, all the crystals will have four new hidden values. Of course, the user's score (and score counter) will reset to zero.
-
-
-//The app should show the number of games the player wins and loses. To that end, do not refresh the page as a means to restart the game.
-
-
-
-//Option 1 Game design notes
-
-
-
-
-
-
+	<script type="text/javascript" src="assets/javascript/game.js">
 	</script>
 </body>
 </html>
