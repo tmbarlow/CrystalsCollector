@@ -83,6 +83,7 @@ var winsLosses = function(){
 		if (wins === 3) {
 				// if player losses three times, new message stating they have lost three times
 				$( "#newRow" ).append( "<h1 class='jumbotron container'>YOU ARE DA BOMB!!! </h1>" );
+			}
 		startGame();
 //The player losses if their score goes above the random number.
 	} else if (totalScore > targetScore) {
@@ -96,7 +97,7 @@ var winsLosses = function(){
 		startGame();
 	}
 }
-}
+
 //calling function which starts the game
 startGame();
 

@@ -10,6 +10,7 @@ font-family: 'NTR', sans-serif;
 	/*font-family: 'Poiret One', cursive;*/
 	/*font-family: 'Permanent Marker', cursive;*/
 	font-family: 'Syncopate', sans-serif;
+	font-size: 50px;
 }
 .image {
 	/* The image used */
@@ -56,6 +57,11 @@ font-family: 'NTR', sans-serif;
 	opacity: 1;
 	background-color: #9d9db0;
 	color: #ffffff;
+	
+}
+
+h1 {
+	font-size: 70px;
 }
 
 .panel {
