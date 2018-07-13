@@ -1,5 +1,5 @@
 body {
-font-family: 'NTR', sans-serif;
+	font-family: 'NTR', sans-serif;
 }
 
 .main-container {
@@ -12,14 +12,15 @@ font-family: 'NTR', sans-serif;
 	font-family: 'Syncopate', sans-serif;
 	font-size: 50px;
 }
+
 .image {
 	/* The image used */
-    background-image: "assets/images/crystals.jpg");
+	background-image: "assets/images/crystals.jpg";
 
-    /* Full height */
- 	width: 100%;
+	/* Full height */
+	width: 100%;
 
-    /* Center and scale the image nicely */
+	/* Center and scale the image nicely */
     /*background-position: center;
     background-repeat: no-repeat;
     background-size: cover;*/
@@ -29,15 +30,15 @@ font-family: 'NTR', sans-serif;
 	background-color: #9d9db0;
 	color: #ffffff;
 	display: flex;
-  	justify-content: center;
-  	align-items: center;
+	justify-content: center;
+	align-items: center;
 }
 
 .imageSize {
 	width: 100px;
 	height: 100px;
-  	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  	text-align: center;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	text-align: center;
 }
 
 .imageSize:hover {
@@ -57,7 +58,6 @@ font-family: 'NTR', sans-serif;
 	opacity: 1;
 	background-color: #9d9db0;
 	color: #ffffff;
-	
 }
 
 h1 {
@@ -67,7 +67,7 @@ h1 {
 .panel {
 	border: 0;
 }	
-	
+
 footer {
 	letter-spacing: 6px;
 	font-size: 20px;

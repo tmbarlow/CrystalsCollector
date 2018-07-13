@@ -27,7 +27,7 @@ var crystal = {
 		name: "green",
 		value: 0
 	}
- };
+};
 
 //target score and total score set to 0
 var targetScore= 0;
@@ -37,7 +37,7 @@ var totalScore = 0;
 //==================================
 //starts game and resets game
 var startGame = function(){
-totalScore = 0;
+	totalScore = 0;
 
 //The player will be shown a random number at the start of the game and it will be between 19 - 120.
 targetScore = Math.floor(Math.random() * (120 - 19 + 1)) + 19;
@@ -84,19 +84,19 @@ var winsLosses = function(){
 				// if player losses three times, new message stating they have lost three times
 				$( "#newRow" ).append( "<h1 class='jumbotron container'>YOU ARE DA BOMB!!! </h1>" );
 			}
-		startGame();
+			startGame();
 //The player losses if their score goes above the random number.
-	} else if (totalScore > targetScore) {
-		losses++;
+} else if (totalScore > targetScore) {
+	losses++;
 		//console.log("LOSER");
 		$("#losses").html(losses);
-			if (losses === 3) {
+		if (losses === 3) {
 				// if player losses three times, new message stating they have lost three times
 				$( "#newRow" ).append( "<h1 class='jumbotron container'>THREE STRIKES, YOU'RE OUT!!!</h1>" );
 			}
-		startGame();
+			startGame();
+		}
 	}
-}
 
 //calling function which starts the game
 startGame();

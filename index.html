@@ -9,100 +9,100 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body background="assets/images/crystals.jpg" class="image">
+	<!--header-->
+	<div class="jumbotron">
+		<div class="container">
+			<header class="text-center" id="main-heading">Crystals Collector</header>
+		</div>
+	</div>
 	<div class="container">
 		<div class="main-container">
-		<!--header-->
-		<div class="jumbotron">
-			<div class="container">
-				<header class="text-center" id="main-heading">Crystals Collector</header>
-			</div>
-		</div>
-		<!--instructions-->
-		<div class="jumbotron">
-			<div class="container">
-				<p>You will be given a random number at he start of the game.</p>
-				<p>There will be four crystals below. By clicking on a crystal you will add a specific amount of points to our total score.</p>
-				<p>You win the game by matching your total score to target score, you lose the game if your total score goes above the total score</p>
-				<p>Lose three times and you are a big fat loser</p>
-				<p>The value of each crystal is hidden from you until you click on it</p>
-				<p>Each time when the game starts, the game will change the values of each crystal</p>
-			</div>
-		</div>
-		<!--jewels-->
-		<div class="row">
-			<div class="col-sm-3">
-				<div class="jumbotron crystals text-center">
-					<img src="assets/images/red.jpg" alt="Red Ruby" class="imageSize" id="red">	
+			<!--instructions-->
+			<div class="jumbotron">
+				<div class="container">
+					<p>You will be given a random number at he start of the game.</p>
+					<p>There will be four crystals below. By clicking on a crystal you will add a specific amount of points to our total score.</p>
+					<p>You win the game by matching your total score to target score, you lose the game if your total score goes above the total score</p>
+					<p>Lose three times and you are a big fat loser</p>
+					<p>The value of each crystal is hidden from you until you click on it</p>
+					<p>Each time when the game starts, the game will change the values of each crystal</p>
 				</div>
 			</div>
-			<div class="col-sm-3">
-				<div class="jumbotron crystals">
-					<img src="assets/images/blue.jpg" alt="Blue Jewel" class="imageSize" id="blue">
-				</div>
-			</div>
-			<div class="col-sm-3">
-				<div class="jumbotron crystals">
-					<img src="assets/images/yellow.jpg" alt="Yellow Stone" class="imageSize" id="yellow">
-				</div>
-			</div>
-			<div class="col-sm-3">
-				<div class="jumbotron crystals">
-					<img src="assets/images/green.jpg" alt="Green Crystal" class="imageSize" id="green">
-				</div>
-			</div>
-		</div>
-		<!--new div if player losses three times-->
-		<div class="row" id="newRow">
-		</div>
-		<!--score/wins/losses-->
-		<div class="row">
-			<div class="col-sm-3">
-				<div class="panel panel-danger">
-					<div class="panel-heading">
-						<h3 class="panel-title text-center">Target score:</h3>
+			<!--jewels-->
+			<div class="row">
+				<div class="col-sm-3">
+					<div class="jumbotron crystals text-center">
+						<img src="assets/images/red.jpg" alt="Red Ruby" class="imageSize" id="red">	
 					</div>
-					<div class="panel-body" >
-						<h1 class="text-center" id="targetScore">0</h1>
+				</div>
+				<div class="col-sm-3">
+					<div class="jumbotron crystals">
+						<img src="assets/images/blue.jpg" alt="Blue Jewel" class="imageSize" id="blue">
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="jumbotron crystals">
+						<img src="assets/images/yellow.jpg" alt="Yellow Stone" class="imageSize" id="yellow">
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="jumbotron crystals">
+						<img src="assets/images/green.jpg" alt="Green Crystal" class="imageSize" id="green">
 					</div>
 				</div>
 			</div>
-			<div class="col-sm-3">
-				<div class="panel panel-info">
-					<div class="panel-heading">
-						<h3 class="panel-title text-center" >Total score:</h3>
+			<!--new div if player losses three times-->
+			<div class="row" id="newRow">
+			</div>
+			<!--score/wins/losses-->
+			<div class="row">
+				<div class="col-sm-3">
+					<div class="panel panel-danger">
+						<div class="panel-heading">
+							<h3 class="panel-title text-center">Target score:</h3>
+						</div>
+						<div class="panel-body" >
+							<h1 class="text-center" id="targetScore">0</h1>
+						</div>
 					</div>
-					<div class="panel-body">
-						<h1 class="text-center" id="yourScore">0</h1>
+				</div>
+				<div class="col-sm-3">
+					<div class="panel panel-info">
+						<div class="panel-heading">
+							<h3 class="panel-title text-center" >Total score:</h3>
+						</div>
+						<div class="panel-body">
+							<h1 class="text-center" id="yourScore">0</h1>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="panel panel-warning">
+						<div class="panel-heading">
+							<h3 class="panel-title text-center">Wins:</h3>
+						</div>
+						<div class="panel-body">
+							<h1 class="text-center" id="wins">0</h1>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="panel panel-success">
+						<div class="panel-heading">
+							<h3 class="panel-title text-center">Losses:</h3>
+						</div>
+						<div class="panel-body">
+							<h1 class="text-center" id="losses">0</h1>
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="col-sm-3">
-				<div class="panel panel-warning">
-					<div class="panel-heading">
-						<h3 class="panel-title text-center">Wins:</h3>
-					</div>
-					<div class="panel-body">
-						<h1 class="text-center" id="wins">0</h1>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-3">
-				<div class="panel panel-success">
-					<div class="panel-heading">
-						<h3 class="panel-title text-center">Losses:</h3>
-					</div>
-					<div class="panel-body">
-						<h1 class="text-center" id="losses">0</h1>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!--footer-->
-		<footer class="jumbotron">
-			<h3>&copy; Tyler Barlow</h3>
-		</footer>
 		</div>		
 	</div>
+	<!--footer-->
+	<footer class="jumbotron">
+		<h3>&copy; Tyler Barlow</h3>
+	</footer>
 	<script type="text/javascript" src="assets/javascript/game.js">
 	</script>
 </body>
