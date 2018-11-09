@@ -15,10 +15,10 @@ body {
 
 .image {
 	/* The image used */
-	background-image: "assets/images/crystals.jpg";
+	background-size: cover;
 
 	/* Full height */
-	width: 100%;
+	background-position: center
 
 	/* Center and scale the image nicely */
     /*background-position: center;
