@@ -16,9 +16,8 @@ body {
 .image {
 	/* The image used */
 	background-size: cover;
-
 	/* Full height */
-	background-position: center
+	background-position: center;
 
 	/* Center and scale the image nicely */
     /*background-position: center;
